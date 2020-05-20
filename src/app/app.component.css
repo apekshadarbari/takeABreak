@@ -1,0 +1,23 @@
+#inputField {
+
+  height: 200px;
+}
+.message-form {
+    min-width: 50px;
+    max-width: 500px;
+    width: 100%;
+    margin: 100px auto;
+  }
+  
+  .message-full-width {
+    width: 100%;
+  }
+
+  .output {
+    background-color: #FFF;
+    width: 20%;
+    padding: 10px 15px;
+    margin: 2% auto;
+    font-size: 1rem;
+    background-color: #eeeeee;
+  }

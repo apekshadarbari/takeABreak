@@ -1,0 +1,14 @@
+<form class="message-form">
+  <mat-form-field class="message-full-width">
+    <textarea matInput id="inputField" name="message" [(ngModel)]="message" (keyup.enter)="countingWords()"
+      (keyup.space)="countingWords()" [disabled]="disableInput" placeholder="Start typing here ..."></textarea>
+  </mat-form-field>
+</form>
+<div class="output">
+  <div>Characters: <span id="characterCount">{{message.length}}</span><br>
+    Words: <span id="wordCount">{{ (message | wordCounter) -1}}</span>
+  </div>
+</div>
+<ngx-spinner>
+  <p style="color: white"> Time to Breathe </p>
+</ngx-spinner>
