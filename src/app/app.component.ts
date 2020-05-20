@@ -14,7 +14,6 @@ export class AppComponent {
   /*-------- Variable Definitions
              oldCount => Word count at which last break was called 
              newCount => Word count since the last break
-             totalWordsTyped => Count of all words type (including ones that were deleted)
              breakTime => Time configured for a break (30 seconds in this case)
   -----------*/
 
@@ -23,7 +22,6 @@ export class AppComponent {
   currentWordCount = 0;
   oldCount = 0;
   newCount = 0;
-  totalWordsTyped = 0;
   breakTime = 30000;
   disableInput = false;
 
@@ -37,8 +35,9 @@ export class AppComponent {
   countingWords() {
 
 
-    this.totalWordsTyped++;
-    this.newCount = this.totalWordsTyped - this.oldCount;
+
+      this.newCount = this.wordCounter.transform(this.message) - this.oldCount;
+
     if (this.newCount % 100 === 0 && this.newCount != 0) {
       this.oldCount += this.newCount;
       this.newCount = 0;
