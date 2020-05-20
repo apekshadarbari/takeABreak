@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { WordCounterPipe } from './word-counter.pipe';
+import { WordCounterPipe } from './_pipes/word-counter.pipe';
 import { NgxSpinnerService } from "ngx-spinner";
 
 
